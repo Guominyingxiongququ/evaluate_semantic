@@ -1,6 +1,8 @@
 I1 = imread('filtered_gt.png');
 I2 = imread('filtered_crf.png');
 
+// This is the absolute path of input files. This should be changed when using this script
+
 % I1 = imread('filtered_gt.png');
 % I2 =imread('filtered_result.png');
 I1 = imresize(I1,[370,1226]);
@@ -8,6 +10,9 @@ I2 = imresize(I2,[370,1226]);
 
 imshow(I1);
 imshow(I2);
+
+// This is the selected classes. If you need to evaluate more classes, 
+// the labled colors of different classes should be added manually.
 
 selectClass = cell(13,2);
 selectClass{1,1}=[0,0,255];
